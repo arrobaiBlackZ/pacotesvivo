@@ -6,7 +6,7 @@ from pygments.lexers import JsonLexer
 from pygments.formatters import TerminalFormatter
 
 from http_clients import client
-from settings import allowed_cookies, data
+from settings import allowed_cookies, data, cookies_path
 from files import dict_cookies
 from utils import humanbytes
 
