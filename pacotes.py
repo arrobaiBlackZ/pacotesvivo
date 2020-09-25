@@ -1,7 +1,6 @@
 import os
 import json
 
-import httpx
 from pygments import highlight
 from pygments.lexers import JsonLexer
 from pygments.formatters import TerminalFormatter
@@ -37,7 +36,7 @@ while json_response['isContratado']:
 	
 	try:
 		response = client.post('contrataPacote.do', data=data, cookies=cookies)
-	except httpx.ConnectTimeout:
+	except Exception:
 		pass
 	finally:
 		json_response = response.json()
